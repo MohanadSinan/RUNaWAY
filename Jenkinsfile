@@ -18,21 +18,18 @@ pipeline {
 	stages {
 
 		stage('Build') {
-
 			steps {
 				sh 'docker build -t mohanadsinan/runaway:latest .'
 			}
 		}
 
 		stage('Login') {
-
 			steps {
 				sh 'docker login -u=$DOCKERHUB_CREDENTIALS_USR -p=$DOCKERHUB_CREDENTIALS_PSW'
 			}
-		}   
+		}
 
 		stage('Push') {
-
 			steps {
 				sh 'docker push mohanadsinan/runaway:latest'
 			}
@@ -51,5 +48,4 @@ pipeline {
 			sh 'docker logout'
 		}
 	}
-
 }
