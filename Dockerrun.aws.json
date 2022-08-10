@@ -1,0 +1,11 @@
+{
+    "AWSEBDockerrunVersion": "1.0",
+    "Image": {
+      "Name": "registry.hub.docker.com/mohanadsinan/runaway:latest"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 80
+      }
+    ]
+  }
