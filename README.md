@@ -1,5 +1,6 @@
 ## RUNaWAY using Docker and Kubernetes
 <!-- 
+
 <h3 align="center">
 RUNaWAY
 </h3>
@@ -14,9 +15,9 @@ RUNaWAY
   Play it now (backup link)</a>
 </p> -->
 
-This is a simplified static code base of RUNaWAY game just using few html and javascript files. We are going to build docker image of the game using nginx as webserver and deploy using docker swarm on two nodes.
+This is a simplified static code base of RUNaWAY game just using few html and javascript files. We are going to build docker image of the game using Nginx as webserver and deploy using docker swarm on two nodes.
 
-Later, we are going to push the docker image to docker hub public registry. And use it to deploy on kubernetes cluster. We are using AWS EKS with service type LoadBalancer.
+Later, we are going to push the Docker image to docker hub public registry. And use it to deploy on Kubernetes cluster. We are using AWS EKS with service type LoadBalancer.
 
 <p align="center">
   <img src = "https://github.com/chandradeoarya/RUNaWAY/blob/master/RUNaWAY.gif?raw=true" width=400>
@@ -33,3 +34,4 @@ Why don't you learn DevOps and do yourself.
 #### Contibutors
 
 - Chandradeo Arya
+- Muhannad Sinan
