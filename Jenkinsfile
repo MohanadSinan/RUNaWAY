@@ -3,7 +3,8 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('MuhannadSinan-dockerhub-token')
+		DOCKERHUB_CREDENTIALS_PSW = credentials('MuhannadSinan-dockerhub-token')
+        DOCKERHUB_CREDENTIALS_USR = 'mohanadsinan'
 		AWS_ACCESS_KEY_ID     = credentials('MuhannadSinan-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('MuhannadSinan-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
@@ -26,9 +27,9 @@ pipeline {
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh 'docker login -u=$DOCKERHUB_CREDENTIALS_USR -p=$DOCKERHUB_CREDENTIALS_PSW'
 			}
-		}
+		}   
 
 		stage('Push') {
 
