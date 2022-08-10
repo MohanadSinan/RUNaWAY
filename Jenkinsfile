@@ -19,7 +19,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t mohanadsinan/runaway:latest .'
+				sh 'sudo docker build -t mohanadsinan/runaway:latest .'
 			}
 		}
 
